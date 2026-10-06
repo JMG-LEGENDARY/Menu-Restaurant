@@ -1,0 +1,20 @@
+*{                          /*Oui, TOUT*/
+margin: 0;
+padding: 0;
+box-sizing: border-box; /*Les tailles incluent les marges*/
+text-size-adjust: 100%; /*Éviter le zoom lors de la rotation sur mobile*/
+overflow-wrap: break-word; /*Couper longs mots pour la barre horizontale*/
+}
+html{
+scroll-behavior: smooth; /*Glissade lors des liens avec les ancres*/
+}
+
+
+.blur-background {
+  background-image: url("./images/img1.jpg"); /* ou simplement "images/img1.jpg" */
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  height: 100vh;
+  width: 100vw;
+}
