@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Animation au Scroll</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="blur-background"></div>
 
-    <div class="content">
-        <img src="./images/img2.jpg" alt="carte">
-    </div>
+    <main class="container">
 
+        <article class="scroll-item text-block">
+            <h2>Bienvenue</h2>
+            <p>Voici le premier bloc de texte court.</p>
+        </article>
+
+        <article class="scroll-item text-block">
+            <h2>Deuxième étape</h2>
+            <p>Un autre bloc d'information qui grossit au milieu.</p>
+        </article>
+
+        <article class="scroll-item text-block">
+            <h2>Dernier texte</h2>
+            <p>Le troisième texte avant l'image.</p>
+        </article>
+
+        <div class="scroll-item image-block">
+            <img src="./images/img2.jpg" alt="Carte">
+        </div>
+
+    </main>
+
+    <!-- Script ajouté à la fin du body -->
+    <script src="script.js"></script>
 </body>
 </html>
