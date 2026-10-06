@@ -1,20 +1,50 @@
-*{                          /*Oui, TOUT*/
-margin: 0;
-padding: 0;
-box-sizing: border-box; /*Les tailles incluent les marges*/
-text-size-adjust: 100%; /*Éviter le zoom lors de la rotation sur mobile*/
-overflow-wrap: break-word; /*Couper longs mots pour la barre horizontale*/
-}
-html{
-scroll-behavior: smooth; /*Glissade lors des liens avec les ancres*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  overflow-wrap: break-word;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Évite les barres de défilement liées au flou */
+}
+
+/* Arrière-plan flouté */
 .blur-background {
-  background-image: url("./images/img1.jpg"); /* ou simplement "images/img1.jpg" */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/img1.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(15px);
-  height: 100vh;
-  width: 100vw;
+  transform: scale(1.1); /* Compense les bords blancs du flou */
+  z-index: -1; /* Placé derrière le reste */
+}
+
+/* Conteneur principal au-dessus */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Ajustement de l'image au centre */
+.content img {
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 8px; /* Optionnel : arrondir les angles */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Optionnel : ombre portée */
 }
